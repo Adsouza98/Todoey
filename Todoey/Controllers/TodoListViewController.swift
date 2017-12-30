@@ -66,7 +66,7 @@ class TodoListViewController: UITableViewController {
             print("error saving context \(error)")
         }
         
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func loadItems(with request : NSFetchRequest<Item> = Item.fetchRequest()) {
@@ -75,7 +75,7 @@ class TodoListViewController: UITableViewController {
         } catch {
             print("Error fetching data from context \(error)")
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     //MARK - Add New Items
